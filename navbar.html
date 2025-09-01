@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Navigation Bar Variations</title>
+    <style>
+        body {
+          font-family: Arial, Helvetica, sans-serif;
+          margin: 0;
+          padding: 20px;
+          background-color: rgb(117, 13, 38);
+          color: white;
+        }
+        .nav-container {
+          margin-bottom: 40px;
+        }
+        h2 {
+          margin-bottom: 10px;
+        }
+        .nav1 {
+          background-color: #e2e4e8;
+          padding: 10px;
+        }
+        .nav1 ul {
+          list-style-type: none;
+          display: flex;
+          justify-content: space-around;
+          margin: 0;
+          padding: 0;
+        }
+        .nav1 li {
+          display: inline;
+        }
+        .nav1 a {
+          text-decoration: none;
+          color: black;
+          padding: 5px 15px;
+          position: relative;
+          
+        }
+         .nav1 a:hover::after {
+          transform: scaleX(1);
+        }
+        /* .nav1 a::after {
+          content: "abc";
+          position: absolute;
+          height: 2px;
+          width: 100%;
+          bottom: 0;
+          left: 0;
+          background-color: rgb(73, 68, 201);
+          transition: transform 0.3s ease-in-out;
+          transform: scaleX(0);
+        } */
+
+        /*.nav1 a:hover::after {
+          content: "Bundles";
+          position: absolute;
+          display: block;
+          padding: 30px;
+          margin: 50px;
+          height: 20pxpx; /* adjust to fit the image */
+          width: 80pxpx;
+          background-image: url('https://thewoobles.com/cdn/shop/files/83GUD-GudetamaCollection-Bundle-YOHue-WEB.jpg?v=1747330094&width=450'), url('https://thewoobles.com/cdn/shop/files/83GUD-GudetamaCollection-Bundle-YOHue-WEB.jpg?v=1747330094&width=450'), url('https://thewoobles.com/cdn/shop/files/83GUD-GudetamaCollection-Bundle-YOHue-WEB.jpg?v=1747330094&width=450'), url('https://thewoobles.com/cdn/shop/files/83GUD-GudetamaCollection-Bundle-YOHue-WEB.jpg?v=1747330094&width=450');
+          background-size: 20px 20px;
+          background-repeat: no-repeat;
+          background-position: left, 20px, 40px, 60x;
+        }
+        */
+
+        .nav1 span {
+          
+          display: inline-block;
+          width: 20px;
+          height: 20px;
+          background-size: cover;
+          background-repeat: no-repeat;
+          margin-right: 6px;
+          background-position: center;
+          transition:transform 0.3s ease, opacity 0.3s ease;
+        }
+        .nav1:hover span {
+          transform:scale(1.2);
+          opacity: 0.8;
+        }
+
+        .nav1 .img1 {
+          background-image: url('https://thewoobles.com/cdn/shop/files/83GUD-GudetamaCollection-Bundle-YOHue-WEB.jpg?v=1747330094&width=450')
+        }
+        .nav1 .img2
+        {background-image: url('https://thewoobles.com/cdn/shop/files/83GUD-GudetamaCollection-Bundle-YOHue-WEB.jpg?v=1747330094&width=450');
+      }
+        .nav1 .img3 {
+           background-image: url('https://thewoobles.com/cdn/shop/files/83GUD-GudetamaCollection-Bundle-YOHue-WEB.jpg?v=1747330094&width=450');
+           }
+        .nav1 .img4 {
+           background-image: url('https://thewoobles.com/cdn/shop/files/83GUD-GudetamaCollection-Bundle-YOHue-WEB.jpg?v=1747330094&width=450');
+           }
+
+       
+        .nav1 .login-btn {
+          background-color: rgb(21, 110, 198);
+          color: white;
+          border: none;
+          padding: 5px 15px;
+          border-radius: 5px;
+          cursor: pointer;
+        }
+        .nav2 {
+          border: 1px solid orange;
+          background-color: #8de8a7;
+          width: 200px;
+          padding: 20px;
+        }
+        .nav2 ul {
+          list-style-type: none;
+          margin: 0;
+          padding: 0;
+        }
+        .nav2 li {
+          margin-bottom: 20px;
+        }
+
+        .nav2 a {
+          text-decoration: none;
+          color: white;
+          font: bolder;
+          display: block;
+          padding: 5px;
+          width: 100%;
+        }
+
+        .nav2 a:hover {
+          background-color: rgb(15, 173, 102);
+        }
+        .nav2 .login-btn {
+          background-color: rgb(15, 173, 102);
+
+          color: white;
+          border: none;
+          width: 100%;
+          padding: 10px;
+          cursor: pointer;
+          transition: transform 0.3s ease;
+          transform-origin: right center left center;
+        }
+        .nav2 .login-btn:hover {
+          background-color: rgb(10, 112, 54);
+          transform: scaleX(0.5);
+        }
+        .nav3 {
+          background-color: rgb(116, 197, 210);
+          padding: 10px;
+        }
+        .nav3 ul {
+          list-style-type: none;
+          margin: 0;
+          padding: 0;
+          display: flex;
+          justify-content: space-around;
+          align-items: center;
+        }
+        .nav3 a {
+          text-decoration: none;
+          color: black;
+          padding: 10px;
+          display: block;
+        }
+        .nav3 .dropdown-content {
+          display: none;
+        }
+        .nav3 .dropdown:hover .dropdown-content {
+          display: block;
+          position: absolute;
+          background-color: rgb(133, 164, 195);
+          min-width: 15px;
+        }
+    </style>
+  </head>
+  <body>
+    <div class="nav-container">
+      <h2>Variation 1:Horizantal with underline effect</h2>
+      <nav class="nav1">
+        <ul>
+          <li><a href="#">Home</a></li>
+          <li>
+            <a href="#">
+              <span class="img1"></span>
+              <span class="img2"></span>
+              <span class="img3"></span>
+              <span class="img4"></span>
+              About</a
+            >
+          </li>
+          <li><a href="#">Products</a></li>
+          <li><button class="login-btn">Login</button></li>
+        </ul>
+      </nav>
+    </div>
+
+    <div class="nav-container">
+      <h2>Variation 2:Vertical with underline effect</h2>
+      <nav class="nav2">
+        <ul>
+          <li><a href="#">Home</a></li>
+          <li><a href="#">About</a></li>
+          <li><a href="#">Products</a></li>
+          <button class="login-btn">Login</button>
+        </ul>
+      </nav>
+    </div>
+
+    <div class="nav-container">
+      <h2>Variation 3:Horizantal with dropdown</h2>
+      <nav class="nav3">
+        <ul>
+          <li><a href="#">Home</a></li>
+          <li class="dropdown">
+            <a href="#">About</a>
+            <div class="dropdown-content">
+              <a href="#">Our story</a>
+              <a href="#">Team</a>
+              <a href="#">Contact</a>
+            </div>
+          </li>
+          <li><a href="#">Products</a></li>
+          <li><button class="login-btn">Login</button></li>
+        </ul>
+      </nav>
+    </div>
+  </body>
+</html>
